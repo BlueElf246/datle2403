@@ -1,0 +1,123 @@
+include \masm32\include\masm32rt.inc ;
+.code
+start:
+    call main
+    exit
+; ««««««««««««««««««««««««««««««««««««««««««««««««««
+main proc
+LOCAL var1:DWORD
+LOCAL var2:DWORD
+LOCAL result:DWORD
+LOCAL COUNT:DWORD
+LOCAL n:DWORD
+mov n,sval(input(‘enter number of times:’)
+mov eax, n
+mov COUNT, eax
+print chr$(“program will compute sum of 2 integers”)
+print str$(COUNT)
+print chr$(“times”,13,10)
+CONTD:
+	CMP COUNT,0
+	je STOP
+	print str$(COUNT)
+	print chr$(":",13,10)
+	mov var1,sval(input(‘enter int 1st:’)
+	mov var2,sval(input(‘enter int 2nd:’)
+	invoke sum, var1, var2
+	mov result, eax
+	print chr$("Sum of them:")
+	print str$(result)
+	print chr$(13,10)
+	DEC COUNT
+	JMP CONTD
+STOP:
+    ret
+main endp
+; ««««««««««««««««««««««««««««««««««««««««««««««««««
+sum proc v1:DWORD, v2:DWORD
+    mov eax,v1
+    add eax, v2
+    ret
+sum endp
+end start
+
+
+
+include \masm32\include\masm32rt.inc ;Write a MASM program that will accept 3 numbers, then sum of them and their average will be printed out.
+.code
+start:
+    call main
+    exit
+; ««««««««««««««««««««««««««««««««««««««««««««««««««
+main proc
+LOCAL var1:DWORD
+LOCAL var2:DWORD
+LOCAL var3:DWORD
+LOCAL result:DWORD
+mov var1,sval(input(‘enter int 1st:’)
+mov var2,sval(input(‘enter int 2nd:’)
+mov var3,sval(input(‘enter int 3rd:’)
+print ch$("sum of them")
+invoke sum, var1, var2, var3
+div eax, 3
+mov result, eax
+print chr$("the average of 3 numbers is:")
+print str$(result)
+print chr$(13,10)
+main endp
+
+sum proc v1:DWORD, v2:DWORD, v3:DWORD
+    mov eax,v1
+    add eax, v2
+    add eax, v3
+    ret
+sum endp
+
+
+include \masm32\include\masm32rt.inc  ;Write a MASM program that will solve the equation ax+b=0
+.code
+start:
+    call main
+    exit
+; ««««««««««««««««««««««««««««««««««««««««««««««««««
+main proc
+LOCAL a:DWORD
+LOCAL b:DWORD
+LOCAL result:DWORD
+mov a,sval(input(‘enter int a:’)
+mov b,sval(input(‘enter int b:’)
+mov eax, b
+sub eax, b
+sub eax, b
+div eax, a
+mov result, eax
+print chr$("the value for x is")
+print str$(result)
+main endp
+
+
+include \masm32\include\masm32rt.inc ;calculate n!
+.code
+start:
+    call main
+    exit
+; ««««««««««««««««««««««««««««««««««««««««««««««««««
+main proc
+LOCAL n:DWORD
+LOCAL result:DWORD
+mov n,sval(input(‘enter int n:’)
+mov eax, n
+DEC n
+CONTD:
+	CMP n,0
+	je STOP
+	mul eax, n
+	DEC n
+	JMP CONTD
+STOP:
+    ret
+main endp
+
+
+
+

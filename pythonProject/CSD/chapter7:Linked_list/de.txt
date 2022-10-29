@@ -1,0 +1,11 @@
+Sinh viên thì có thông tin id, name, age và score. Hãy viết chương trình menu sử dụng danh sách liên kết đơn để thực hiện các thao tác sau
+1.	Thêm sinh viên vào đầu danh sách
+2.	Thêm sinh viên vào cuối danh sách
+3.	Xóa sinh viên ở đầu danh sách
+4.	Đếm số lượng sinh viên
+5.	Hiện thị danh sách thông tin sinh viên, mỗi sinh viên hiển thị trên mỗi dòng theo định dạng:
+[id, name, age, score]
+6.	Cập nhật thông tin sinh viên
+7.	Tìm sinh viên theo mã số
+8.	Tìm sinh viên theo tên
+Other: Thoát chương trình

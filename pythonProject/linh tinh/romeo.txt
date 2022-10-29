@@ -1,0 +1,59 @@
+include \masm32\include\masm32rt.inc
+
+.code
+
+start:
+
+    call main
+
+    exit
+
+main proc
+
+    LOCAL var1:DWORD
+
+    LOCAL var2:DWORD
+
+    LOCAL var3:DWORD
+
+    ;tong
+
+    print chr$("Tong cua 3 so: ")
+
+    mov ecx,5
+
+    add ecx,8
+
+    add ecx,7
+
+    print str$(ecx)
+
+    print chr$(13,10)
+
+    ;trungbinh
+
+    print chr$("Trung binh cua 3 so: ")
+
+    mov ecx,5
+
+    add ecx,8
+
+    add ecx,7
+
+    mov eax, ecx ;eax dung de chua phan nguyen
+
+    xor edx, edx ;xoa du lieu trong thanh ghi
+
+    mov ebx,3
+
+    div ebx
+
+    print str$(eax)
+
+    print chr$(13,10)
+
+ret
+
+main endp
+
+end start
