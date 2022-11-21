@@ -1,5 +1,5 @@
 ### Hi there 👋
-Note: notebook which has (i) at the end mean important
+Note: notebook which has (i) at the begining mean important
 <!--
 **datle2403/datle2403** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
